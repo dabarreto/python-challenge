@@ -21,10 +21,10 @@ import os
 import csv
 
 # Path to collect data from the Resources folder
-csvpath = os.path.join("/Users/anadb/Desktop/adbr_bootcamp_2021/homework_repo/python-challenge/PyBank/Resources/budget_data.csv")
+pybank_csv = os.path.join("/Users/anadb/Desktop/adbr_bootcamp_2021/homework_repo/python-challenge/PyBank/Resources/budget_data.csv")
 #csvpath = os.path.join('python-challenge', 'PyBank', 'Resources', 'budget_data.csv')
 
-with open(csvpath) as csvfile:
+with open(pybank_csv) as csvfile:
 
     #CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
