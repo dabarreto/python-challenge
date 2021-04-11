@@ -20,15 +20,15 @@ pypoll_csv = os.path.join('/Users/anadb/Desktop/adbr_bootcamp_2021/homework_repo
 #csvpath = os.path.join('python-challenge', 'PyPoll', 'Resources', 'election_data.csv')
 
 
-with open(pypoll_csv) as csvfile:
+with open(pypoll_csv, 'r') as csvfile:
 
     #CSV reader specifies delimiter and variable that holds contents
-    csvreader = csv.reader(csvfile, delimiter=',')
+    csv_reader = csv.reader(csvfile, delimiter=',')
 
 #    print(csvreader)
 
     # Read the header row first (skip this step if there is no header)
-    csv_header = next(csvreader)
+    csv_header = next(csv_reader)
 
 
     # Lists to store data
@@ -39,7 +39,7 @@ with open(pypoll_csv) as csvfile:
  
    
     # Read each row of data after the header
-    for row in csvreader:
+    for row in csv_reader:
     
         # Calculate total votes, percentage and winner from candidates
         # vote counter: add 1 row
